@@ -9,6 +9,7 @@ function App() {
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noreferrer');
   };
+  
   return (
     <div className="App">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent  .text-center" id="nav" style={{marginLeft: 570}}>
@@ -134,11 +135,11 @@ function App() {
                                     <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                   </svg></button>
           </div>
-          <div class="mini1" style={{marginLeft:380,marginTop:-180}}>
+          <div class="mini1" style={{marginLeft:380,marginTop:-170}}>
               <h3 style={{color:"white",fontSize:9}}><i>Python v3, Ren'Py Library</i></h3>
               <h4 style={{color:"#46C2CB",fontSize:16}}>REMORSE : 1D Game</h4>
               <p style={{color:"#F2F7A1",fontSize:11,width:160, marginLeft:230}}>Help characters altered by climate change and learn of the "true evil" their leaders hide in space. Created for APCSP.</p>
-              <button type="button" style={{marginTop:15}}class="btn" id="btn_link" onClick={() => openInNewTab('https://github.com/nataliakusmirek/REMORSE')}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+              <button type="button" style={{marginTop:5}}class="btn" id="btn_link" onClick={() => openInNewTab('https://github.com/nataliakusmirek/REMORSE')}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                   </svg></button>
           </div>
@@ -175,7 +176,7 @@ function App() {
             <h3 style={{color:"#46C2CB",marginLeft: 260, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\contact:</h3>
             <h3 style={{color:"white",marginLeft: 595, marginTop:200, fontSize:45, position:"absolute",opacity:0.6}}>let's get in touch.</h3>
             <h3 style={{color:"#46C2CB",marginLeft: 575, marginTop:270, fontSize:18, position:"absolute",opacity:1}}>Contact me, and let's start something amazing.</h3>
-            <button style={{marginTop:330, marginLeft:270, position:"absolute"}}type="button" class="btn btn-outline-info" onClick={() => openInNewTab('https://github.com/nataliakusmirek/CS50x---Portfolio')}>e-mail</button>
+            <button style={{marginTop:330, marginLeft:270, position:"absolute"}}type="button" class="btn btn-outline-info"><a href="mailto:nataliakusmirekct@gmail.com" style={{textDecoration:"none", color:"white"}}>e-mail</a></button>
             <img src="coffee.png" style={{marginTop:400,width:600,height:350, marginLeft:10, position:"static"}}></img>
         </div>
         
