@@ -1,17 +1,43 @@
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-
-
+import animationData from './data.json';
+import loading from './loading.gif';
+import Lottie from 'react-lottie';
 
 function App() {
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noreferrer');
   };
   
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+const Loading = () => {
+  return(
+    <div style={{marginTop: 10}}>
+      <Lottie 
+	    options={defaultOptions}
+        height={400}
+        width={400}
+      />
+    </div>
+  )
+}
+
+
   return (
     <div className="App">
+        
+
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent  .text-center" id="nav" style={{marginLeft: 570}}>
  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

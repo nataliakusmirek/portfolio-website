@@ -4,6 +4,16 @@
 
 }
 
+.loader-container
+{
+  width:100%;
+  height:100%;
+  position: fixed;
+  background-color: #9DB2C9 url("loading.gif") center
+  no-repeat;
+z-index: 1;
+}
+  
 .App-logo {
   height: 40vmin;
   pointer-events: none;
