@@ -228,7 +228,7 @@ function App() {
         </div>
         </div>
 
-
+      
         <div class="contact"  id="contact" style={{marginTop:500}}>
             <h3 style={{color:"#46C2CB",marginLeft: 260, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\contact:</h3>
             <h3 style={{color:"white",marginLeft: 595, marginTop:200, fontSize:45, position:"absolute",opacity:0.6}}>let's get in touch.</h3>
