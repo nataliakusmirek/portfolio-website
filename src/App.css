@@ -4,6 +4,15 @@
 
 }
 
+header.scrolling
+{
+  background: black;
+}
+
+header
+{
+  text-align: center;
+}
 .loader-container
 {
   width:100%;
