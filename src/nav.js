@@ -1,33 +1,16 @@
-// src/components/Navbar.js
+import React from 'react';
+import spinner from './loading.gif';
 
-import React, { useState, useEffect } from 'react';
-import { debounce } from '../utilities/helpers';
-
-const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  const handleScroll = debounce(() => {
-    const currentScrollPos = window.pageYOffset;
-
-    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
-
-    setPrevScrollPos(currentScrollPos);
-  }, 100);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-
-  }, [prevScrollPos, visible, handleScroll]);
-
-
+function Spinner() {
   return (
-    <div style={{ top: visible ? '0' : '-60px' }}>
-      Some Company Inc.
+    <div>
+      <img
+        src={spinner}
+        style={{ width: '100px', margin: 'auto', display: 'block' }}
+        alt="Loading..."
+      />
     </div>
   );
 };
 
-export default Navbar;
+export default Spinner;

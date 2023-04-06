@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import FadeIn from 'react-fade-in';
 import Typing from 'react-typing-animation';
+import ImageFadeIn from "react-image-fade-in";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,10 +11,12 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 
 function App() {
-  
+
   
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noreferrer');
+
+
   };
 
 
@@ -22,6 +25,7 @@ function App() {
     
     <div className="App">
 
+    
     <header class="sticky-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent  .text-center"  id="home" style={{marginLeft: 570}}>
  
@@ -31,27 +35,27 @@ function App() {
  <div class="collapse navbar-collapse" id="navbarNav">
    <ul class="navbar-nav">
      <li class="nav-item active">
-      <FadeIn delay={600}>
+      <FadeIn delay={700}>
       <a class="nav-link" href="#project" style={{marginTop:20, color:"white"}}>Projects</a>
       </FadeIn>
      </li>
      <li class="nav-item">
-      <FadeIn delay={300}>
+      <FadeIn delay={500}>
       <a class="nav-link" href="#tutor" style={{marginTop:20, color:"white"}}>Tutoring</a>
     </FadeIn>
       </li>
      <li class="nav-item">
       <FadeIn>
-      <a class="nav-link" href="#home"><img src="logo.png" id="logo" style={{width:80,height:80}}alt=" "></img></a>
+      <a class="nav-link" onclick="location.reload();"><img src="logo.png" id="logo" style={{width:80,height:80}}alt=" "></img></a>
       </FadeIn>
      </li>
      <li class="nav-item">
-      <FadeIn delay={300}>
+      <FadeIn delay={500}>
       <a class="nav-link" href="#contact" style={{marginTop:20, color:"white"}}>Contact</a>
       </FadeIn>
      </li>
      <li class="nav-item" style={{marginTop:20, color:"white"}}>
-      <FadeIn delay={600}>
+      <FadeIn delay={700}>
       <a class="nav-link" style={{color:"white"}}onclick="window.open('https://drive.google.com/file/d/1I-I5ZW74Gj24DcNqsy46aV39p1I6rJ9p/view?usp=sharing', '_blank'); return false;">Résumé</a>
       </FadeIn>
      </li>
@@ -76,9 +80,8 @@ function App() {
           <FadeIn  delay={2000} transitionDuration={700}>
           <h3 class="homeINFO" style={{color:"#6D67E4",marginRight:425, marginTop:100, marginBottom: 150,fontSize:25}}>Full Stack Developer, UI Designer, and Private Tutor.</h3>
           </FadeIn>
+          <ImageFadeIn opacityTransition={5}src="megaphone.png" class="megaphone" alt=" " style={{width:800,height:480, position:"absolute",top:120, right:0}}/>
           <FadeIn delay={900}>
-          <img src="megaphone.png" class="megaphone" alt=" " style={{width:800,height:480, position:"absolute",top:120, right:0}}></img>
-        
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white"class="bi bi-caret-down-fill" viewBox="0 0 16 16">
         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
         </svg>
@@ -89,13 +92,11 @@ function App() {
 
 
         <div class="about" style={{marginTop:80}}>
-            <FadeIn delay={5000}>
-            <img src="selfie.png" class="selfie" alt=" " style={{width:680,height:380, position:"absolute",top:1100, right:730}}></img>
-            </FadeIn>
+            <ImageFadeIn opacityTransition={15} src="selfie.png" class="selfie" alt=" " style={{width:680,height:380, position:"absolute",top:1100, right:730}}/>
             <Typing loop>
             <Typing.Delay ms={4000} />
             <h3 style={{color:"#46C2CB",marginLeft: 265, marginTop:-80, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\about:</h3>
-            <Typing.Reset count={1} delay={700}       repeat={Infinity} />
+            <Typing.Reset count={1} delay={700} />
             </Typing>
             <FadeIn delay={5300}>
             <h3 class="aboutme" style={{color:"white",opacity:50,marginLeft: 520, marginTop:530, fontSize:50, position:"relative",opacity:0.6}}>a little about me.</h3>
@@ -112,10 +113,10 @@ function App() {
 
 
         <div class="project" id = "project" style={{marginTop:700, width:1000}}>
-        <Typing loop>
+            <Typing loop>
             <Typing.Delay ms={8000} />
             <h3 style={{color:"#46C2CB",marginLeft: 260, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\projects:</h3>
-            <Typing.Reset count={1} delay={700}       repeat={Infinity} />
+            <Typing.Reset count={1} delay={700}/>
             </Typing>
 
     <FadeIn delay={9000}>
@@ -195,9 +196,9 @@ function App() {
 
         <div class="tutor" id="tutor" style={{marginTop:500}}>
         <Typing loop>
-            <Typing.Delay ms={18000} />
+            <Typing.Delay ms={15000} />
             <h3 style={{color:"#46C2CB",marginLeft: 260, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\tutoring:</h3>
-            <Typing.Reset count={1} delay={700}       repeat={Infinity} />
+            <Typing.Reset count={1} delay={700} />
             </Typing>
             <FadeIn delay ms={23000}>
             <img src="project.png" style={{width:900,height:500, marginRight:300}}></img>
@@ -211,28 +212,39 @@ function App() {
             <FadeIn delay ms={35000}>
             <img src="tutoring.png" style={{position:"absolute",width:600,marginLeft:25}}></img>
             </FadeIn>
+          
           <div class="mini_projects" style={{marginLeft:260,width:1000, marginTop:570}}>
+     
+          <FadeIn delay={28000}>
+          <div class="mini1" style={{marginRight:20,marginTop:730}}>
           <img src="icon.png" style={{width:540,height:300}}></img>
-          <img src="icon.png" style={{width:540,height:-300,marginTop:200}}></img>
-          <div class="mini1" style={{marginRight:20,marginTop:-730}}>
-              <h4 style={{color:"#46C2CB",fontSize:66}}><i>71%</i></h4>
-              <p style={{color:"white",fontSize:18,width:160, marginLeft:410}}>of new STEM jobs are in computing.</p>
+
+              <h4 style={{color:"#46C2CB",fontSize:66, marginTop:-230, marginLeft:-20}}><i>71%</i></h4>
+              <p style={{color:"white",fontSize:18,width:160, marginLeft:400}}>of new STEM jobs are in computing.</p>
               
           </div>
+          </FadeIn>
+          <FadeIn delay={29000}>
           <div class="mini1" style={{marginLeft:-10,marginTop:360}}>
-              
-              <h4 style={{color:"#46C2CB",fontSize:66}}><i>90%</i></h4>
-              <p style={{color:"white",fontSize:18,width:160, marginLeft:420}}>of parents want their child to know how to code.</p>
+          <img src="icon.png" style={{width:540,height:-300,marginTop:200}}></img>
+
+              <h4 style={{color:"#46C2CB",fontSize:66,marginTop:-240,marginLeft:-20}}><i>90%</i></h4>
+              <p style={{color:"white",fontSize:18,width:160, marginLeft:410}}>of parents want their child to know how to code.</p>
               
           </div>
-        </div>
+          </FadeIn>
+          </div>
         </div>
 
       
-        <div class="contact"  id="contact" style={{marginTop:500}}>
+        <div class="contact" style={{marginTop:500}}>
+        <Typing loop>
+            <Typing.Delay ms={18000} />
             <h3 style={{color:"#46C2CB",marginLeft: 260, fontSize:20, position:"absolute",opacity:0.5}}>C:\nataliakusmirek\home\contact:</h3>
+            <Typing.Reset count={1} delay={700} />
+            </Typing>
             <h3 style={{color:"white",marginLeft: 595, marginTop:200, fontSize:45, position:"absolute",opacity:0.6}}>let's get in touch.</h3>
-            <h3 style={{color:"#46C2CB",marginLeft: 575, marginTop:270, fontSize:18, position:"absolute",opacity:1}}>Contact me, and let's start something amazing.</h3>
+            <h3   id="contact"  style={{color:"#46C2CB",marginLeft: 575, marginTop:270, fontSize:18, position:"absolute",opacity:1}}>Contact me, and let's start something amazing.</h3>
             <button style={{marginTop:330, marginLeft:270, position:"absolute"}}type="button" class="btn btn-outline-info"><a href="mailto:nataliakusmirekct@gmail.com" style={{textDecoration:"none", color:"white"}}>e-mail</a></button>
             <img src="coffee.png" style={{marginTop:400,width:600,height:350, marginLeft:10, position:"static"}}></img>
         </div>
@@ -241,11 +253,11 @@ function App() {
       <footer style={{color:"white",marginTop:90, opacity:0.4}}><i>Created and designed by Natalia Kusmirek.</i></footer>
       
 
+      <script src="nav.js"></script>  
 
   </div>
   
   );
-     
 }
 
 export default App;

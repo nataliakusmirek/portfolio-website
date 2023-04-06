@@ -9,8 +9,9 @@ header.scrolling
   background: black;
 }
 
-header
+.header
 {
+  position:sticky;
   text-align: center;
 }
 .loader-container
